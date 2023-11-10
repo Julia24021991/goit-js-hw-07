@@ -5,13 +5,13 @@ const galleryListItem = galleryListImg(galleryItems);
 
 function galleryListImg(galleryItem) {
     return galleryItems.map(({ preview, original, description }) => {
-        return `<li class="gallery__item">
+        return `<div class="modal"><li class="gallery__item">
    <a class="gallery__link" href="${original}">
       <img class="gallery__image"
       src="${preview}"
       alt="${description}" />
    </a>
-</li>`;
+</li></div>`;
     }).join("");
 
 }
